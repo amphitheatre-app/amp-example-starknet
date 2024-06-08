@@ -1,0 +1,22 @@
+name = "amp-example-starknet"
+version = "0.1.0"
+edition = "v1"
+description = "A simple Starknet example app"
+readme = "README.md"
+homepage = "https://github.com/amphitheatre-app/amp-example-starknet"
+repository = "https://github.com/amphitheatre-app/amp-example-starknet"
+license = "Apache-2.0"
+license-file = "LICENSE"
+keywords = ["example", "starknet", "getting-started"]
+categories = ["example"]
+
+[build]
+builder = "ghcr.io/amp-buildpacks/cairo-builder"
+
+[partners]
+starknet = { version = "stable", registry = "catalog" }
+
+[build.env]
+BP_ENABLE_STARKNET_DEPLOY = "false"
+# BP_STARKNET_DEPLOY_PRIVATE_KEY = "<Your-Deploy-Private-Key>"
+# BP_STARKNET_DEPLOY_WALLET_ADDRESS = "<Your-Deploy-Wallet-Address>"
